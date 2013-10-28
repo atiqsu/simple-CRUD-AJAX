@@ -1,0 +1,418 @@
+/* line 2, _coz.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 2, _coz.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 2, _coz.scss */
+body {
+  line-height: 1;
+}
+
+/* line 2, _coz.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 2, _coz.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 2, _coz.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+/* line 2, _coz.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 14, _coz.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 11, global.scss */
+html, .submit-button-active, #results-header button {
+  background: #627d4d;
+  background: -moz-radial-gradient(center, ellipse cover, #627d4d 0%, #1f3b08 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #627d4d), color-stop(100%, #1f3b08));
+  background: -webkit-radial-gradient(center, ellipse cover, #627d4d 0%, #1f3b08 100%);
+  background: -o-radial-gradient(center, ellipse cover, #627d4d 0%, #1f3b08 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #627d4d 0%, #1f3b08 100%);
+  background: radial-gradient(ellipse at center, #627d4d 0%, #1f3b08 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#627d4d', endColorstr='#1f3b08',GradientType=1 );
+}
+
+/* line 22, global.scss */
+html {
+  height: 100%;
+}
+
+/* line 24, global.scss */
+body {
+  font: 100% 'Open Sans', Arial, sans-serif;
+  color: #dbdbdb;
+}
+
+/* line 33, global.scss */
+#results-nav {
+  top: 5.7em;
+}
+
+/* line 37, global.scss */
+h2 {
+  width: 4em;
+  left: 50%;
+  margin-left: -2em;
+  position: absolute;
+  cursor: pointer;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 4em;
+  text-align: center;
+  text-shadow: 2px 2px #4d4d4d;
+  font-weight: 400;
+  -webkit-transition: top .5s;
+  transition: top .5s;
+  top: 4.2em;
+}
+/* line 55, global.scss */
+h2:hover {
+  color: #eeeeee;
+  text-shadow: 4px 4px #4d4d4d;
+}
+
+/* line 64, global.scss */
+.nav-active {
+  top: 1em !important;
+  color: #eeeeee;
+  cursor: auto;
+}
+
+/* line 70, global.scss */
+#submit, #results {
+  position: absolute;
+  padding: 2%;
+  top: 12em;
+  min-height: 4em;
+  left: 50%;
+  margin-left: -30%;
+  display: none;
+  width: 60%;
+  border-radius: .65em;
+  -webkit-box-shadow: 0 0 7px 2px #7c7c7c;
+  box-shadow: 0 0 7px 2px #7c7c7c;
+  background: url("../images/blacktwill.png");
+  border: .3em solid #dbdbdb;
+}
+
+/* line 6, _coz.scss */
+#submit-container:after {
+  display: table;
+  content: '';
+  clear: both;
+}
+
+/* line 88, global.scss */
+.submit-header {
+  float: left;
+  width: 25%;
+  max-width: 100%;
+  text-align: center;
+}
+/* line 94, global.scss */
+.submit-header > button {
+  width: 60%;
+  font-family: "Raleway";
+  font-size: 1em;
+  color: #627d4d;
+  font-weight: 700;
+  border-radius: .3em;
+}
+/* line 102, global.scss */
+.submit-header > p {
+  margin: 4% 0;
+}
+
+/* line 107, global.scss */
+h3 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  margin-bottom: 1em;
+  color: #627d4d;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+/* line 115, global.scss */
+#new-type-input {
+  display: none;
+}
+
+/* line 119, global.scss */
+#submit-button {
+  display: block;
+  text-align: center;
+  width: 16%;
+  margin: 3em auto 0;
+  padding: 0.9% 0;
+  border-radius: .3em;
+  font-family: "Raleway";
+  font-size: 1em;
+}
+
+/* line 130, global.scss */
+select {
+  width: 38%;
+  padding: 1%;
+  font-family: "Open Sans";
+}
+
+/* line 137, global.scss */
+select, input {
+  background: #bee2d1;
+  max-width: 100%;
+}
+
+/* line 142, global.scss */
+select[name="type"] {
+  width: 60%;
+}
+
+/* line 146, global.scss */
+.submit-button-active {
+  font-weight: 700;
+  color: #dbdbdb;
+}
+
+/* line 151, global.scss */
+#submit-text {
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  width: 40%;
+  margin-left: -20%;
+  display: none;
+  font-size: 14px;
+  color: red;
+  text-align: center;
+}
+
+/* line 163, global.scss */
+#results-header {
+  text-align: center;
+}
+/* line 165, global.scss */
+#results-header h3 {
+  display: inline-block;
+}
+/* line 168, global.scss */
+#results-header select {
+  width: 20%;
+  display: inline-block;
+}
+/* line 172, global.scss */
+#results-header button {
+  width: 16%;
+  min-width: 100px;
+  padding: 0.9% 0;
+  border-radius: .3em;
+  font-family: "Raleway";
+  font-size: 1em;
+  font-weight: 700;
+  color: #dbdbdb;
+}
+
+/* line 184, global.scss */
+table {
+  width: 100%;
+  margin: 0 auto;
+  display: none;
+}
+
+/* line 190, global.scss */
+td {
+  margin: 1%;
+  background: #313131;
+  border: 1px solid green;
+  text-align: center;
+}
+
+/* line 197, global.scss */
+thead tr {
+  cursor: pointer;
+}
+/* line 198, global.scss */
+thead tr td {
+  font-weight: 700;
+  border: 2px solid green;
+}
+/* line 201, global.scss */
+thead tr td:hover {
+  color: #0070ff;
+}
+
+/* line 208, global.scss */
+.returnbutton {
+  width: 166px;
+  border-radius: .65em;
+  -webkit-box-shadow: 0 0 7px 2px #7c7c7c;
+  box-shadow: 0 0 7px 2px #7c7c7c;
+  background: url("../images/blacktwill.png");
+  border: .3em solid #dbdbdb;
+  bottom: 0%;
+  margin-bottom: -7em;
+  left: 50%;
+  margin-left: -83px;
+  position: absolute;
+  height: 6em;
+  cursor: pointer;
+}
+
+/* line 224, global.scss */
+.returnbutton-inner {
+  position: absolute;
+}
+
+/* line 226, global.scss */
+.returnbutton-outside {
+  background: #1f3b08;
+  top: 2.6em;
+  right: 2.15em;
+}
+/* line 230, global.scss */
+.returnbutton-outside:after {
+  content: '';
+  position: absolute;
+  background: #1f3b08;
+  right: -0.95em;
+  top: -2em;
+}
+/* line 237, global.scss */
+.returnbutton-outside:before {
+  content: '';
+  position: absolute;
+  border-right: 60px solid #1f3b08;
+  top: -0.78em;
+  right: 3em;
+}
+
+/* line 246, global.scss */
+.returnbutton-shadow {
+  top: 2.8em;
+  right: 1.95em;
+  background: #585858;
+}
+/* line 250, global.scss */
+.returnbutton-shadow:after {
+  content: '';
+  position: absolute;
+  right: -0.95em;
+  top: -2em;
+  background: #585858;
+}
+/* line 257, global.scss */
+.returnbutton-shadow:before {
+  content: '';
+  position: absolute;
+  border-right: 60px solid #585858;
+  top: -0.58em;
+  right: 2.9em;
+}
+
+/* line 266, global.scss */
+.returnbutton-outside, .returnbutton-shadow {
+  width: 3em;
+  height: 1em;
+}
+
+/* line 270, global.scss */
+.returnbutton-outside:after, .returnbutton-shadow:after {
+  width: 1em;
+  height: 3em;
+  border-radius: .35em .35em .35em 0;
+}
+
+/* line 276, global.scss */
+.returnbutton-outside:before, .returnbutton-shadow:before {
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+}
+
+@media screen and (max-width: 650px) {
+  /* line 282, global.scss */
+  td:nth-child(3), td:nth-child(4) {
+    display: none;
+  }
+
+  /* line 286, global.scss */
+  #submit, #results {
+    width: 95%;
+    margin-left: -47.5%;
+  }
+
+  /* line 291, global.scss */
+  h3 {
+    font-size: 1em;
+  }
+
+  /* line 295, global.scss */
+  .submit-header > button {
+    font-size: .8em;
+  }
+
+  /* line 300, global.scss */
+  .nav-active {
+    top: 0em !important;
+  }
+
+  /* line 304, global.scss */
+  #submit, #results {
+    top: 6em;
+  }
+
+  /* line 308, global.scss */
+  #submit-button {
+    margin-top: 0em;
+  }
+
+  /* line 312, global.scss */
+  h2 {
+    top: 1.1em;
+  }
+
+  /* line 315, global.scss */
+  #results-nav {
+    top: 2.4em;
+  }
+
+  /* line 318, global.scss */
+  #submit-button {
+    font-size: .9em;
+  }
+}
+/* line 323, global.scss */
+#login {
+  position: absolute;
+  width: 400px;
+  left: 50%;
+  margin-left: -200px;
+  top: 19.4em;
+  font-family: 'raleway';
+  font-size: 1.5em;
+  text-align: center;
+}
