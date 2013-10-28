@@ -12,7 +12,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>C and C drink reviews</title>
+	<title>C and C Reviews</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href='http://fonts.googleapis.com/css?family=Oswald|Raleway:500|Open+Sans' rel='stylesheet' type='text/css'>
