@@ -19,6 +19,7 @@
 	<link rel="shortcut icon" href="../images/favicon.png">
 	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 	<link rel="stylesheet" type="text/css" href="../styles/global-a.css">
+	<script type="text/javascript" src="scripts/angular.js"></script>
 </head>
 <body>
 	<section id="home">
