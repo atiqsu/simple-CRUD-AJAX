@@ -21,7 +21,7 @@
 	<link rel="stylesheet" type="text/css" href="../styles/global-a.css">
 	<script type="text/javascript" src="../scripts/angular.js"></script>
 </head>
-<body ng-controller="MainController">
+<body ng-controller="NavCtrl">
 	<ng-view></ng-view>
 	<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="../scripts/general-a.js"></script>

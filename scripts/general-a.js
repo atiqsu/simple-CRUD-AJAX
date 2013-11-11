@@ -4,12 +4,12 @@ simpleCRUD.config(function ($routeProvider) {
 	$routeProvider
 		.when('/',
 			{
-				controller: 'MainController',
+				controller: 'NavCtrl',
 				templateUrl: '../partials/home.php'
 			})
 		.when('/submit',
 			{
-				controller: 'MainController',
+				controller: 'SubmitCtrl',
 				templateUrl: '../partials/submit.html'
 			})
 		.when('/results',
@@ -29,9 +29,27 @@ simpleCRUD.factory('submitOptions', function () {
 	return factory;
 });
 
-simpleCRUD.controller('MainController', function ($scope, submitOptions) {
-	$scope.getSubmits = submitOptions.getSubmitOptions();
-	console.log($scope.getSubmits);
+simpleCRUD.controller('NavCtrl', function ($scope) {
+
+});
+
+simpleCRUD.controller('SubmitCtrl', function ($scope, $http, submitOptions) {
+	// $scope.getSubmits = submitOptions.getSubmitOptions();
+	
+	$http({
+		method: 'GET',
+		url: '../scripts/get-types.php'
+	})
+	.success(function (data, status, headers, config) {
+		$scope.getSubmits = data;
+  	})
+  	.error(function (data, status, headers, config) {
+  		console.log('ajax error');    
+  	});
+
+  	$scope.checkSubmits = function () {
+  		console.log('checksubmits fired');
+  	};
 });
 
 
