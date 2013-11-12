@@ -1,17 +1,24 @@
 var startTime, endTime;
 
 jQuery(document).ready(function($) {
+
+	var typesViewModel = {
+		types: ko.observableArray()
+	};
+
+	// typesViewModel.types.push('');
+
 	var filter;
+			
+	ko.applyBindings(typesViewModel, $('#submit-type-select')[0]);
 
 	$.ajax({
 		type: 'GET',
 		dataType: 'json',
 		url: '../scripts/get-types.php',
 		success: function (data) {
-			var types = data,
-				$typesSelect = $('select.type-select');
-			for (i = 0; i < types.length; i++) {
-				$typesSelect.append('<option value="' + types[i] + '">' + types[i] + '</option>');
+			for (i = 0; i < data.length; i++) {
+				typesViewModel.types.push(data[i]);
 			}
 		},
 		error: function (xhr, textStatus, errorThrown) {
@@ -20,6 +27,25 @@ jQuery(document).ready(function($) {
 			console.log(errorThrown);
 		}
 	});
+
+
+	// $.ajax({
+	// 	type: 'GET',
+	// 	dataType: 'json',
+	// 	url: '../scripts/get-types.php',
+	// 	success: function (data) {
+	// 		var types = data,
+	// 			$typesSelect = $('select.type-select');
+	// 		for (i = 0; i < types.length; i++) {
+	// 			$typesSelect.append('<option value="' + types[i] + '">' + types[i] + '</option>');
+	// 		}
+	// 	},
+	// 	error: function (xhr, textStatus, errorThrown) {
+	// 		console.log(xhr);
+	// 		console.log(textStatus);
+	// 		console.log(errorThrown);
+	// 	}
+	// });
 	
 	$('h2:first-child').on('click', function(event) {
 		$(this).addClass('nav-active').next().fadeOut(500, function () {

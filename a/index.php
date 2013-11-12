@@ -19,6 +19,7 @@
 	<link rel="shortcut icon" href="../images/favicon.png">
 	<link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
 	<link rel="stylesheet" type="text/css" href="../styles/global-a.css">
+	<script type="text/javascript" src="../scripts/knockout.js"></script>
 </head>
 <body>
 	<section id="home">
@@ -34,8 +35,7 @@
 		<div id="submit-container">
 			<div class="submit-header">
 				<h3>Type</h3>
-				<select name="type" class="type-select">
-					<option value="blank"></option>
+				<select name="type" class="type-select" id="submit-type-select" data-bind="options: types, optionsCaption: ''">
 				</select>
 				<p>or</p>
 				<button name="new-type">New Type</button>
